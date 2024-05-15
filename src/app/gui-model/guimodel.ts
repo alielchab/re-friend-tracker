@@ -256,7 +256,7 @@ export class GuiModel {
                             "type": "backbutton",
                         },
                         {
-                            "type": "EditFriend",
+                            "type": "button",
                             "name": "EditFriend",
                             "icon": "fa-user",
                             "color": "green",
@@ -281,7 +281,7 @@ export class GuiModel {
                             "search": true,
                             "url": "/friend/:friendKey/activity",
                             "form": {
-                                "form": "FriendForm"
+                                "form": "ActivityForm"
                             }
                             
                         },
@@ -309,9 +309,49 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/location",
+                            // "form": {
+                            //     "form": "LocationForm"
+                            // }
+                            "page": "locationsKeyPage",
+                        },
+                    ]
+                },
+                {
+                    "id": "locationsKeyPage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-home",
+                            "color": "green",
+                            "url": "/location/:locationKey",
                             "form": {
                                 "form": "LocationForm"
                             }
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "fa-calendar",
+                            "color": "green",
+                            "url": "/location/:locationKey/activity",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-user",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
+                            "form": {
+                                "form": "L"
+                            }
+                            
                         },
                     ]
                 },
@@ -339,6 +379,7 @@ export class GuiModel {
                             "form": {
                                 "form": "GroupForm"
                             }
+                            
                         },
                     ]
                 },
