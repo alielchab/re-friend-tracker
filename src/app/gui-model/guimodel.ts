@@ -185,6 +185,35 @@ export class GuiModel {
                         }
                     ]
                 },
+                {
+                    "id": "AddActivityFormLocation",
+                    "title": "Activity",
+                    "url": "/location/:locationKey/activity",
+                    "formFieldList": [
+                        {
+                            "id":   "activityLocation",
+                            "type": "autocomplete",
+                            "name": "Activity",
+                            "url": "/activity",
+                            "defaultKey": "activityKey",
+                            "readonly": true,
+                            "form": "ActivityForm",
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
             ],
             "pageList": [
                 {
@@ -271,7 +300,7 @@ export class GuiModel {
                             "icon": "fa-calendar",
                             "color": "green",
                             "form": {
-                                "form": "ActivityForm"
+                                "form": "AddActivityForm"
                             }
                         },
                         {
@@ -337,9 +366,8 @@ export class GuiModel {
                             "name": "AddActivity",
                             "icon": "fa-calendar",
                             "color": "green",
-                            "url": "/location/:locationKey/activity",
                             "form": {
-                                "form": "ActivityForm"
+                                "form": "AddActivityFormLocation"
                             }
                         },
                         {
@@ -349,7 +377,7 @@ export class GuiModel {
                             "search": true,
                             "url": "/location/:locationKey/activity",
                             "form": {
-                                "form": "L"
+                                "form": "ActivityForm"
                             }
                             
                         },
